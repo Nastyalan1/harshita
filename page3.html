@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What to Eat?</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/5d/8a/a3/5d8aa361011a48fb147e7993b6ce9dcc.jpg');
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .food-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .food-item {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .food-item:hover {
+            transform: scale(1.05);
+        }
+
+        .food-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .food-item input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .food-item.selected {
+            border: 5px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>What would you like to eat?</h1>
+    <div class="food-gallery">
+        <label class="food-item">
+            <img src="https://i.pinimg.com/736x/70/77/16/7077161cdb252c166a4ac4be69a59760.jpg" alt="Pani puri">
+            <input type="radio" name="food" value="Pizza">
+        </label>
+        <label class="food-item">
+            <img src="https://i.pinimg.com/736x/d3/42/1f/d3421fedf1f7648ca7c7f1879c397c4b.jpg" alt="Burger">
+            <input type="radio" name="food" value="Burger">
+        </label>
+        <label class="food-item">
+            <img src="https://i.pinimg.com/736x/27/e9/b3/27e9b396a2d11d82f85337742e380dc6.jpg" alt="Sushi">
+            <input type="radio" name="food" value="Sushi">
+        </label>
+       
+        <label class="food-item">
+            <img src="https://i.pinimg.com/736x/a9/4e/49/a94e49fc39e6a12d7b3b8d713b07767a.jpg" alt="Ice Cream">
+            <input type="radio" name="food" value="Ice Cream">
+        </label>
+    </div>
+    <script>
+        const items = document.querySelectorAll('.food-item');
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                items.forEach(i => i.classList.remove('selected'));
+                item.classList.add('selected');
+            });
+        });
+    </script>
+     <button onclick="window.location.href='page4.html'">Yes! 💖</button>
+</body>
+</html>

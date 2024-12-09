@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Place Selector</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/49/86/45/498645a3da87e7ce0325f68fb5bb81cc.jpg');
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .image-item {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        label, select {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 16px;
+        }
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            font-size: 16px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      
+        <label for="places">Choose a place to visit:</label>
+       
+        <div class="images">
+            <div class="image-item">
+                <img src="https://i.pinimg.com/736x/bb/c9/72/bbc972d009c77a0e0dd316fbc62e72b8.jpg" alt="Beautiful Park">
+            </div>
+            
+            <div class="image-item">
+                <img src="https://i.pinimg.com/736x/e1/76/43/e176438d47b8c7e278d79aa51c0c3991.jpg" alt="Art Museum">
+            </div>
+            <div class="image-item">
+                <img src="https://i.pinimg.com/736x/c2/6b/1c/c26b1c52457b9418de5929f1a2734f96.jpg" alt="Sunny Beach">
+            </div>
+            <div class="image-item">
+                <img src="https://i.pinimg.com/736x/82/81/04/8281048cf5f30a817bbd79280951a845.jpg" alt="Movie Theater">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitChoice() {
+            const selectedPlace = document.getElementById('places').value;
+            alert(`You chose to visit: ${selectedPlace}`);
+        }
+    </script>
+     <button onclick="window.location.href='page5.html'">And alsoooo</button>
+</body>
+</html>

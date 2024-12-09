@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff6347;
+            text-align: center;
+            z-index: 10;
+        }
+        .heart {
+            position: absolute;
+            top: -50px;
+            font-size: 3em;
+            color: red;
+            animation: fall 5s infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+        .heart:nth-child(odd) {
+            animation-duration: 5s;
+        }
+        .heart:nth-child(even) {
+            animation-duration: 6s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank you for being with me! 💖</h1>
+    <div class="heart" style="left: 10%;">❤️</div>
+    <div class="heart" style="left: 20%;">❤️</div>
+    <div class="heart" style="left: 30%;">❤️</div>
+    <div class="heart" style="left: 40%;">❤️</div>
+    <div class="heart" style="left: 50%;">❤️</div>
+    <div class="heart" style="left: 60%;">❤️</div>
+    <div class="heart" style="left: 70%;">❤️</div>
+    <div class="heart" style="left: 80%;">❤️</div>
+    <div class="heart" style="left: 90%;">❤️</div>
+
+
+</body>
+</html>
