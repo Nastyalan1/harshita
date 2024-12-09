@@ -86,11 +86,9 @@
         <input type="date" id="datePicker">
         <div id="selectedDate">Selected Date: None</div>
     </div>
-
     <script>
         const datePicker = document.getElementById('datePicker');
         const selectedDate = document.getElementById('selectedDate');
-
         datePicker.addEventListener('change', () => {
             const date = new Date(datePicker.value);
             const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
@@ -119,11 +117,9 @@
             min-height: 100vh;
             background-color: #f8f8f8;
         }
-
         h1 {
             margin-bottom: 20px;
         }
-
         .food-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -131,7 +127,6 @@
             max-width: 800px;
             width: 100%;
         }
-
         .food-item {
             position: relative;
             cursor: pointer;
@@ -139,18 +134,15 @@
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
-
         .food-item:hover {
             transform: scale(1.05);
         }
-
         .food-item img {
             width: 100%;
             height: auto;
             display: block;
             border-radius: 10px;
         }
-
         .food-item input {
             position: absolute;
             top: 0;
@@ -160,7 +152,6 @@
             opacity: 0;
             cursor: pointer;
         }
-
         .food-item.selected {
             border: 5px solid #007bff;
         }
@@ -181,7 +172,6 @@
             <img src="https://i.pinimg.com/736x/27/e9/b3/27e9b396a2d11d82f85337742e380dc6.jpg" alt="Sushi">
             <input type="radio" name="food" value="Sushi">
         </label>
-       
         <label class="food-item">
             <img src="https://i.pinimg.com/736x/a9/4e/49/a94e49fc39e6a12d7b3b8d713b07767a.jpg" alt="Ice Cream">
             <input type="radio" name="food" value="Ice Cream">
@@ -189,7 +179,6 @@
     </div>
     <script>
         const items = document.querySelectorAll('.food-item');
-
         items.forEach(item => {
             item.addEventListener('click', () => {
                 items.forEach(i => i.classList.remove('selected'));
@@ -277,14 +266,11 @@
 </head>
 <body>
     <div class="container">
-      
         <label for="places">Choose a place to visit:</label>
-       
         <div class="images">
             <div class="image-item">
                 <img src="https://i.pinimg.com/736x/bb/c9/72/bbc972d009c77a0e0dd316fbc62e72b8.jpg" alt="Beautiful Park">
             </div>
-            
             <div class="image-item">
                 <img src="https://i.pinimg.com/736x/e1/76/43/e176438d47b8c7e278d79aa51c0c3991.jpg" alt="Art Museum">
             </div>
@@ -296,7 +282,6 @@
             </div>
         </div>
     </div>
-
     <script>
         function submitChoice() {
             const selectedPlace = document.getElementById('places').value;
@@ -354,8 +339,7 @@
     <div class="container">
         <h1>Can we also hold hands?</h1>
         <button onclick="alert('You clicked Yes!')">Yes</button>
-        <button onclick="alert('You clicked No!')">No</button>
-      
+        <button onclick="alert('You clicked No!')">No</button>  
     </div>
     <button onclick="window.location.href='page6.html'"> AND alsooo</button> 
 </body>
